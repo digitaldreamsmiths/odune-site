@@ -3,38 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Odune — Your stuff. Sorted.</title>
-<meta name="description" content="Take a photo — Odune builds your home inventory. For claims, warranties, moving, and whatever comes next. Everything stays on your iPhone.">
+<title>Odune — Know what you own.</title>
+<meta name="description" content="A private home inventory for your photos, receipts, values and warranties. Everything stays on your device: no accounts, no tracking. Coming soon for iPhone, iPad and Android.">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
 <link rel="canonical" href="https://www.odune.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Odune">
-<meta property="og:title" content="Odune — Your stuff. Sorted.">
-<meta property="og:description" content="Take a photo — Odune builds your home inventory. For claims, warranties, moving, and whatever comes next. Everything stays on your iPhone.">
+<meta property="og:title" content="Odune — Know what you own.">
+<meta property="og:description" content="A private home inventory for your photos, receipts, values and warranties. Everything stays on your device.">
 <meta property="og:url" content="https://www.odune.app/">
 <meta property="og:image" content="https://www.odune.app/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Odune — Your stuff. Sorted.">
-<meta name="twitter:description" content="Take a photo — Odune builds your home inventory. Everything stays on your iPhone.">
+<meta name="twitter:title" content="Odune — Know what you own.">
+<meta name="twitter:description" content="A private home inventory for your photos, receipts, values and warranties. Everything stays on your device.">
 <meta name="twitter:image" content="https://www.odune.app/assets/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- Line icons, drawn once and used by name below. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-value" viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M16.5 7.5c-.8-1.3-2.5-2-4.5-2-2.5 0-4.2 1.2-4.2 3s1.7 2.6 4.2 3.2 4.5 1.4 4.5 3.3-1.9 3.2-4.5 3.2c-2.2 0-4-.8-4.8-2.2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10.5" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M3 3l18 18"/><path d="M10.6 5.1A10.5 10.5 0 0 1 12 5c5 0 8.5 4.2 9.5 7-.4 1.1-1.2 2.5-2.4 3.8M6.5 6.6C4.6 8 3.2 10 2.5 12c1 2.8 4.5 7 9.5 7 1.8 0 3.4-.5 4.8-1.3"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></symbol>
+    <symbol id="i-sweep" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M4 12h16"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2.5" y="4" width="13" height="16" rx="2"/><rect x="15.5" y="8" width="6" height="12" rx="1.5"/><path d="M8 17h2"/></symbol>
+  </defs>
+</svg>
 
 <header class="site">
   <nav class="site wrap">
     <a class="brand" href="index.html"><img src="assets/icon-64.png" width="64" height="64" alt="">Odune</a>
     <a class="link" href="#features">Features</a>
+    <a class="link" href="#how">How it works</a>
     <a class="link" href="#pricing">Pricing</a>
     <a class="link" href="privacy.html">Privacy</a>
     <a class="link" href="support.html">FAQ</a>
-    <a class="btn primary small" href="#launch">Join the launch list</a>
+    <a class="btn primary small" href="#launch">Join the launch list <span class="arrow">→</span></a>
   </nav>
 </header>
 
@@ -43,9 +62,8 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <h1>Your stuff.<br><span class="accent-blue">Sorted.</span></h1>
-        <p class="lede">Take a photo. Odune builds your home inventory.</p>
-        <p class="sub">For claims, warranties, moving, and whatever comes next.</p>
+        <h1>Know what<br><span class="accent">you own.</span></h1>
+        <p class="lede">A private home inventory for your photos, receipts, values and warranties. Be ready when it matters.</p>
         <form class="launch-form" id="launch" action="https://formsubmit.co/support@odune.app" method="POST">
           <label class="sr-only" for="launch-email">Email address</label>
           <input id="launch-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
@@ -55,159 +73,160 @@
           <input type="hidden" name="_captcha" value="false">
           <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
         </form>
-        <p class="hero-note">One launch email. No spam. By joining, you agree to our <a href="privacy.html#launch-list">privacy notice</a>. <a href="#features">See how it works.</a></p>
+        <p class="hero-note">One launch email. No spam. By joining, you agree to our <a href="privacy.html#launch-list">privacy notice</a>.</p>
+        <p class="platform"><svg class="ic" aria-hidden="true"><use href="#i-devices"/></svg>Coming soon for iPhone, iPad and Android</p>
       </div>
 
-      <div class="flow" aria-hidden="true">
-        <!-- camera capture card -->
-        <div class="capture">
-          <div class="statusdots"><i></i><i></i><i></i></div>
-          <div class="frame">
-            <img src="assets/chair.jpg" width="560" height="560" alt="">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone"><img src="assets/android-home.png" width="534" height="1200" alt=""></div>
+        <div class="float-card item">
+          <img src="assets/chair.jpg" width="560" height="560" alt="">
+          <div>
+            <div class="name">Leather armchair</div>
+            <div class="meta">Furniture · Living Room</div>
+            <div class="price">$1,299.00</div>
           </div>
-          <div class="modes"><span>VIDEO</span><span class="on">PHOTO</span><span>PANO</span></div>
-          <div class="shutter"></div>
         </div>
-
-        <!-- recognized item card -->
-        <div class="itemcard">
-          <div class="thumb">
-            <img src="assets/chair.jpg" width="560" height="560" alt="">
+        <div class="float-card detail">
+          <span class="tile"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <div>
+            <div class="name">Warranty</div>
+            <div class="meta">Ends in 4 months</div>
           </div>
-          <div class="name">Leather Armchair</div>
-          <div class="meta">Furniture · Living Room</div>
-          <div class="price">$1,299.00</div>
         </div>
-
-        <!-- inventory phone -->
-        <div class="phone"><img src="assets/inventory.png" width="529" height="1146" alt=""></div>
-
-        <!-- hand-drawn arrows -->
-        <svg class="doodle" style="left:196px; top:180px; width:70px; height:60px" viewBox="0 0 70 60">
-          <path d="M8 8 C 30 10, 48 24, 54 46" fill="none" stroke="#2e6bff" stroke-width="5" stroke-linecap="round"/>
-          <path d="M42 40 L 55 49 L 57 33" fill="none" stroke="#2e6bff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <svg class="doodle" style="left:340px; top:330px; width:74px; height:54px" viewBox="0 0 74 54">
-          <path d="M8 44 C 28 46, 50 34, 62 14" fill="none" stroke="#2e6bff" stroke-width="5" stroke-linecap="round"/>
-          <path d="M62 30 L 64 12 L 47 16" fill="none" stroke="#2e6bff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <!-- sparkles -->
-        <svg class="doodle sparkle" style="left:214px; top:30px; width:34px; height:34px" viewBox="0 0 38 38">
-          <path d="M19 2 L22 15 L36 19 L22 23 L19 36 L16 23 L2 19 L16 15 Z" fill="#8b5cf6"/>
-        </svg>
-        <svg class="doodle sparkle s2" style="left:262px; top:88px; width:20px; height:20px" viewBox="0 0 38 38">
-          <path d="M19 2 L22 15 L36 19 L22 23 L19 36 L16 23 L2 19 L16 15 Z" fill="#06b6d4"/>
-        </svg>
-        <svg class="doodle sparkle s3" style="left:6px; top:0; width:40px; height:34px" viewBox="0 0 40 34">
-          <path d="M6 30 L 12 12" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
-          <path d="M20 26 L 22 6" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
-          <path d="M32 30 L 36 16" stroke="#f97316" stroke-width="5" stroke-linecap="round"/>
-        </svg>
-        <!-- handwritten note -->
-        <div class="note">
-          <span class="hand">All your stuff. Right here.</span>
-          <svg width="46" height="34" viewBox="0 0 46 34" style="margin-top:2px">
-            <path d="M6 6 C 14 22, 28 28, 40 26" fill="none" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round"/>
-            <path d="M30 32 L 42 26 L 32 18" fill="none" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <div class="float-card detail receipt">
+          <span class="tile"><svg class="ic"><use href="#i-receipt"/></svg></span>
+          <div>
+            <div class="name">Receipt saved</div>
+            <div class="meta">With the item</div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="steps">
     <div class="wrap">
-      <div class="step snap reveal">
-        <div class="bubble">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-        </div>
-        <div><h3>Snap</h3><p>Take a photo.</p></div>
-      </div>
-      <svg class="step-arrow" width="44" height="20" viewBox="0 0 44 20"><path d="M2 10 C 14 4, 28 16, 40 10" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M32 4 L 42 10 L 32 16" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="step sorted reveal">
-        <div class="bubble">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#2e6bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg>
-        </div>
-        <div><h3>Sorted</h3><p>Odune organizes<br>it for you.</p></div>
-      </div>
-      <svg class="step-arrow" width="44" height="20" viewBox="0 0 44 20"><path d="M2 10 C 14 4, 28 16, 40 10" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M32 4 L 42 10 L 32 16" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="step ready reveal">
-        <div class="bubble">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
-        </div>
-        <div><h3>Ready</h3><p>Proof when<br>you need it.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="badges">
-    <div class="wrap">
-      <div class="badge">
-        <span class="chip pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.3 9.3a2 2 0 0 0 2.8 0l7.2-7.2a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1"/></svg></span>
-        Free for 150 items. Pro is $9.99 once.
-      </div>
-      <div class="badge">
-        <span class="chip green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
-        Everything stays on your iPhone.
-      </div>
+      <ul class="trust">
+        <li><span class="tile"><svg class="ic"><use href="#i-phone"/></svg></span>On your device.</li>
+        <li><span class="tile"><svg class="ic"><use href="#i-lock"/></svg></span>No accounts.</li>
+        <li><span class="tile"><svg class="ic"><use href="#i-eye-off"/></svg></span>No tracking.</li>
+      </ul>
     </div>
   </section>
 
   <section class="block" id="features">
     <div class="wrap">
       <div class="block-head reveal">
-        <h2>Document a whole room in <span class="accent-blue">minutes</span>, not weekends.</h2>
-        <p>Home inventories fail because they're tedious. Odune removes every tap it can.</p>
+        <h2>Everything about your things, <span class="accent">in one place.</span></h2>
+        <p>The details you would need after a fire, a burglary or a move, kept together and kept private.</p>
       </div>
-      <div class="features benefit-groups">
-        <div class="feature benefit reveal">
-          <div class="chip orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-          <h3>Catalog faster</h3>
-          <p>Use Room Sweep to photograph item after item. On-device AI suggests names and categories, while barcode scanning fills in product details.</p>
+      <div class="feature-row">
+        <div class="feature reveal">
+          <span class="tile"><svg class="ic"><use href="#i-camera"/></svg></span>
+          <h3>Photos</h3>
+          <p>See what you own.</p>
         </div>
-        <div class="feature benefit reveal">
-          <div class="chip green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg></div>
-          <h3>Be ready for claims</h3>
-          <p>Keep photos, receipts, values, and warranty dates together. Export an insurance-ready PDF, CSV, or complete backup whenever you need it.</p>
+        <div class="feature reveal">
+          <span class="tile"><svg class="ic"><use href="#i-receipt"/></svg></span>
+          <h3>Receipts</h3>
+          <p>Keep proof of purchase.</p>
         </div>
-        <div class="feature benefit reveal">
-          <div class="chip pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6c0 4.4-3.6 8-8 8s-8-3.6-8-8"/><path d="M12 14v7"/><path d="M8 21h8"/><path d="M12 2v4"/></svg></div>
-          <h3>Plan ahead <span class="badge-pro">PRO</span></h3>
-          <p>Record who should receive meaningful belongings and create an Estate Distribution PDF—an organizational record, not a will or legal instrument.</p>
+        <div class="feature reveal">
+          <span class="tile"><svg class="ic"><use href="#i-value"/></svg></span>
+          <h3>Values</h3>
+          <p>Track what it’s worth.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="tile"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <h3>Warranties</h3>
+          <p>Get a reminder before one ends.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="tile"><svg class="ic"><use href="#i-house"/></svg></span>
+          <h3>Organized</h3>
+          <p>By property, room and category.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="shots block">
+  <section class="block app">
     <div class="wrap">
       <div class="block-head reveal">
-        <h2>Made to feel <span class="accent-orange">effortless</span>.</h2>
+        <h2>The Odune app</h2>
+        <p>Simple, private, and built for real life.</p>
       </div>
-      <div class="row">
-        <div class="shot-phone tilt-l"><img src="assets/home.png" width="529" height="1146" alt="Odune dashboard with total inventory value"></div>
-        <div class="shot-phone"><img src="assets/inventory.png" width="529" height="1146" alt="Odune inventory list"></div>
-        <div class="shot-phone tilt-r"><img src="assets/properties.png" width="529" height="1146" alt="Odune properties organized by room"></div>
+      <div class="shots">
+        <figure class="reveal">
+          <div class="shot-phone"><img src="assets/iphone-home.png" width="552" height="1200" alt="Odune on iPhone: the home screen, with the total value of the inventory"></div>
+          <figcaption><span class="device">iPhone</span><strong>See it all at a glance</strong>Your total value, rooms and latest items on one screen.</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="shot-phone"><img src="assets/android-property.png" width="534" height="1200" alt="Odune on Android: a property with its rooms, their values and item counts"></div>
+          <figcaption><span class="device">Android</span><strong>Room by room</strong>Every room in a property, with its value and what is in it.</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="shot-phone"><img src="assets/iphone-item.png" width="552" height="1200" alt="Odune on iPhone: an item's details, with quantity, value and where it is kept"></div>
+          <figcaption><span class="device">iPhone</span><strong>Save important details</strong>Value, quantity, where it came from and where it is kept.</figcaption>
+        </figure>
       </div>
-      <p class="shot-cap">Real screenshots. Your whole home, valued at a glance.</p>
+      <p class="shot-cap">Real screenshots from the app, with sample data.</p>
     </div>
   </section>
 
-  <section class="block" id="pricing">
+  <section class="prepared">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Be prepared</p>
+        <h2>If something happened tomorrow, would you know what you owned?</h2>
+        <p>Odune helps you build a visual record of your belongings, with photos, receipts and values in one place, so the details are ready when you need them: for an insurance claim, a move, or your own peace of mind.</p>
+        <a class="btn primary" href="#launch">Join the launch list <span class="arrow">→</span></a>
+      </div>
+      <div class="shot-phone" aria-hidden="true"><img src="assets/android-room.png" width="534" height="1200" alt=""></div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
     <div class="wrap">
       <div class="block-head reveal">
-        <h2>Free to start. <span class="accent-blue">One purchase, ever.</span></h2>
-        <p>Odune Pro is a one-time purchase — not a subscription. Buy it once and it's yours, like the things it keeps track of.</p>
+        <p class="eyebrow">How it works</p>
+        <h2>Build your inventory in three simple steps.</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal">
+          <span class="tile"><svg class="ic"><use href="#i-sweep"/></svg></span>
+          <h3>Take photos</h3>
+          <p>Photograph your belongings, or walk through a room with Room Sweep and capture one item after another.</p>
+        </li>
+        <li class="reveal">
+          <span class="tile"><svg class="ic"><use href="#i-edit"/></svg></span>
+          <h3>Add details</h3>
+          <p>Add receipts, values, warranty dates and notes. Scan a barcode to look up many products.</p>
+        </li>
+        <li class="reveal">
+          <span class="tile"><svg class="ic"><use href="#i-folder"/></svg></span>
+          <h3>Stay organized</h3>
+          <p>Sort by property, room and category, and export a PDF report, a spreadsheet or a full backup.</p>
+        </li>
+      </ol>
+      <div class="center"><a class="btn primary" href="#launch">Join the launch list <span class="arrow">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="block tinted" id="pricing">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <h2>Free to start. <span class="accent">One purchase, ever.</span></h2>
+        <p>Odune Pro is a one-time purchase, not a subscription. Buy it once and it’s yours, like the things it keeps track of.</p>
       </div>
       <div class="plans">
         <div class="plan reveal">
           <h3>Free <span class="price">$0</span></h3>
           <ul>
             <li>1 property, 10 rooms, 150 items</li>
-            <li>Room Sweep &amp; on-device photo recognition</li>
-            <li>Barcode autofill</li>
+            <li>Room Sweep for fast capture</li>
+            <li>Barcode lookup</li>
             <li>Warranty tracking &amp; reminders</li>
-            <li>Every export format — PDF, CSV, full backup</li>
+            <li>Every export format: PDF, CSV, full backup</li>
           </ul>
           <p class="note">Everything you need to document an apartment.</p>
         </div>
@@ -219,20 +238,24 @@
             <li>Legacy Planning &amp; Estate Distribution PDF</li>
             <li>Future improvements to current Pro features included</li>
           </ul>
-          <p class="note">No subscription. No upsells.</p>
+          <p class="note">Legacy Planning is an organizational record, not a will or legal instrument.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="block privacy-band">
+  <section class="block" id="privacy">
     <div class="wrap">
-      <div class="panel reveal">
-        <div class="lock"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h2>What the app collects: <span class="accent-blue">nothing.</span></h2>
-        <p>No accounts, no analytics, no ads, no tracking. Photo recognition runs entirely on your device.
-        The only optional network request is a barcode lookup — it sends the digits, nothing else.</p>
-        <a class="btn ghost" href="privacy.html">Read the full privacy policy</a>
+      <div class="privacy-panel reveal">
+        <p class="eyebrow">Your privacy matters</p>
+        <h2>Your data. On your device.</h2>
+        <p>Odune keeps your inventory on your device. There are no accounts, no analytics and no tracking, and nothing leaves your device unless you export or back it up yourself. The one optional network request is a barcode lookup, which sends only the barcode’s digits.</p>
+        <ul class="trust">
+          <li><span class="tile"><svg class="ic"><use href="#i-phone"/></svg></span>On your device.</li>
+          <li><span class="tile"><svg class="ic"><use href="#i-lock"/></svg></span>No accounts.</li>
+          <li><span class="tile"><svg class="ic"><use href="#i-eye-off"/></svg></span>No tracking.</li>
+        </ul>
+        <a class="btn ghost" href="privacy.html">Read the privacy policy</a>
       </div>
     </div>
   </section>
@@ -240,8 +263,8 @@
   <section class="block finale">
     <div class="wrap reveal">
       <img class="appicon" src="assets/icon-192.png" width="192" height="192" alt="Odune app icon">
-      <h2>Your stuff. <span class="accent-blue">Sorted.</span></h2>
-      <p>Odune is coming soon to the App Store for iPhone and iPad.</p>
+      <h2>Know what <span class="accent">you own.</span></h2>
+      <p>Odune is coming soon to the App Store for iPhone and iPad, and to Google Play for Android.</p>
       <div class="hero-cta">
         <a class="btn primary" href="#launch">Join the launch list <span class="arrow">→</span></a>
         <a class="btn ghost" href="support.html">Questions? Get in touch</a>
