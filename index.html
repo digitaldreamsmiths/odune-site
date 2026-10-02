@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Odune — Know what you own.</title>
-<meta name="description" content="A private home inventory for your photos, receipts, values and warranties. Everything stays on your device: no accounts, no tracking. Coming soon for iPhone, iPad and Android.">
+<title>Odune — Know what you own. A private home inventory app</title>
+<meta name="description" content="Odune is a private home inventory app: photograph your belongings room by room, keep receipts, values and warranty dates together, and export a PDF report for your insurer. On your device. No accounts. No tracking. Coming soon for iPhone, iPad and Android.">
 <link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
 <link rel="canonical" href="https://www.odune.app/">
@@ -41,6 +41,13 @@
     <symbol id="i-sweep" viewBox="0 0 24 24"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><path d="M4 12h16"/></symbol>
     <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></symbol>
     <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v10H3z"/><path d="M14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20a7 7 0 0 1 14 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7"/><path d="M18.5 14a6 6 0 0 1 3.5 6"/></symbol>
+    <symbol id="i-export" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M7.5 7.5 12 3l4.5 4.5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></symbol>
+    <symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1.5"/><path d="M5 9v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9"/><path d="M10 13h4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2.5" y="4" width="13" height="16" rx="2"/><rect x="15.5" y="8" width="6" height="12" rx="1.5"/><path d="M8 17h2"/></symbol>
   </defs>
 </svg>
@@ -48,8 +55,8 @@
 <header class="site">
   <nav class="site wrap">
     <a class="brand" href="index.html"><img src="assets/icon-64.png" width="64" height="64" alt="">Odune</a>
+    <a class="link" href="#room-sweep">Room Sweep</a>
     <a class="link" href="#features">Features</a>
-    <a class="link" href="#how">How it works</a>
     <a class="link" href="#pricing">Pricing</a>
     <a class="link" href="privacy.html">Privacy</a>
     <a class="link" href="support.html">FAQ</a>
@@ -73,12 +80,13 @@
           <input type="hidden" name="_captcha" value="false">
           <input class="honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
         </form>
-        <p class="hero-note">One launch email. No spam. By joining, you agree to our <a href="privacy.html#launch-list">privacy notice</a>.</p>
+        <p class="hero-note">One launch email, no spam. This is not an Odune account: the app needs none. By joining, you agree to our <a href="privacy.html#launch-list">privacy notice</a>.</p>
+        <a class="see-how" href="#room-sweep">See how it works <span aria-hidden="true">↓</span></a>
         <p class="platform"><svg class="ic" aria-hidden="true"><use href="#i-devices"/></svg>Coming soon for iPhone, iPad and Android</p>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="phone"><img src="assets/android-home.png" width="534" height="1200" alt=""></div>
+        <div class="phone"><img src="assets/iphone-home.png" width="552" height="1200" alt=""></div>
         <div class="float-card item">
           <img src="assets/chair.jpg" width="560" height="560" alt="">
           <div>
@@ -113,11 +121,30 @@
     </div>
   </section>
 
+  <section class="block sweep" id="room-sweep">
+    <div class="wrap">
+      <div class="sweep-copy reveal">
+        <p class="eyebrow">Room Sweep</p>
+        <h2>Capture a room, <span class="accent">item after item.</span></h2>
+        <p>The hardest part of a home inventory is starting. Room Sweep makes a room one short walk: point, shoot, move on to the next thing.</p>
+        <ol class="sweep-steps">
+          <li><span class="tile"><svg class="ic"><use href="#i-house"/></svg></span><div><strong>Open a room and start a sweep</strong>The kitchen, the living room, the garage.</div></li>
+          <li><span class="tile"><svg class="ic"><use href="#i-camera"/></svg></span><div><strong>Photograph one item after another</strong>The TV, then the speaker, then the lamp. The camera stays ready for the next one.</div></li>
+          <li><span class="tile"><svg class="ic"><use href="#i-edit"/></svg></span><div><strong>Add the details when it suits you</strong>Each photo waits as a draft for that room. Unfinished sweeps are kept on your device.</div></li>
+        </ol>
+      </div>
+      <figure class="sweep-shot reveal">
+        <div class="shot-phone"><img src="assets/android-room.png" width="534" height="1200" alt="Odune on Android: a room with its items and the Room Sweep button"></div>
+        <figcaption><span class="device">Android</span>Real screenshot, sample data</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="block" id="features">
     <div class="wrap">
       <div class="block-head reveal">
         <h2>Everything about your things, <span class="accent">in one place.</span></h2>
-        <p>The details you would need after a fire, a burglary or a move, kept together and kept private.</p>
+        <p>Photos, receipts, values and warranty dates, kept together and kept private.</p>
       </div>
       <div class="feature-row">
         <div class="feature reveal">
@@ -149,6 +176,24 @@
     </div>
   </section>
 
+  <section class="block why">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <p class="eyebrow">Why Odune?</p>
+        <h2>Why keep a home inventory?</h2>
+        <p>Not just for the worst day. For the ordinary ones too.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal"><span class="tile"><svg class="ic"><use href="#i-truck"/></svg></span><h3>Moving</h3><p>Know what you own before it goes in a box, and check it all arrived.</p></div>
+        <div class="why-card reveal"><span class="tile"><svg class="ic"><use href="#i-receipt"/></svg></span><h3>Receipts</h3><p>“Where’s the receipt for that?” It’s with the item.</p></div>
+        <div class="why-card reveal"><span class="tile"><svg class="ic"><use href="#i-clock"/></svg></span><h3>Warranties</h3><p>Know what’s still covered, with a reminder before a warranty ends.</p></div>
+        <div class="why-card reveal"><span class="tile"><svg class="ic"><use href="#i-shield"/></svg></span><h3>Insurance</h3><p>Photos, values and receipts ready for a claim after theft, fire or water damage.</p></div>
+        <div class="why-card reveal"><span class="tile"><svg class="ic"><use href="#i-house"/></svg></span><h3>Staying organized</h3><p>What you have, what it’s worth, and which room it’s in.</p></div>
+        <div class="why-card reveal"><span class="tile"><svg class="ic"><use href="#i-people"/></svg></span><h3>Family</h3><p>Help the people you love understand what you own, and who should have it.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="block app">
     <div class="wrap">
       <div class="block-head reveal">
@@ -170,18 +215,6 @@
         </figure>
       </div>
       <p class="shot-cap">Real screenshots from the app, with sample data.</p>
-    </div>
-  </section>
-
-  <section class="prepared">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="eyebrow">Be prepared</p>
-        <h2>If something happened tomorrow, would you know what you owned?</h2>
-        <p>Odune helps you build a visual record of your belongings, with photos, receipts and values in one place, so the details are ready when you need them: for an insurance claim, a move, or your own peace of mind.</p>
-        <a class="btn primary" href="#launch">Join the launch list <span class="arrow">→</span></a>
-      </div>
-      <div class="shot-phone" aria-hidden="true"><img src="assets/android-room.png" width="534" height="1200" alt=""></div>
     </div>
   </section>
 
@@ -212,11 +245,43 @@
     </div>
   </section>
 
+  <section class="block tinted" id="export">
+    <div class="wrap">
+      <div class="block-head reveal">
+        <p class="eyebrow">Backup &amp; export</p>
+        <h2>Your inventory isn’t trapped <span class="accent">in Odune.</span></h2>
+        <p>Every plan, free included, can take everything out whenever you like. Exports go only where you send them.</p>
+      </div>
+      <div class="export-grid">
+        <div class="export-card reveal"><span class="tile"><svg class="ic"><use href="#i-receipt"/></svg></span><h3>PDF report</h3><p>Photos, values and receipts in one document, to share with your insurer or keep on file. For the whole home, a property or a room.</p></div>
+        <div class="export-card reveal"><span class="tile"><svg class="ic"><use href="#i-table"/></svg></span><h3>Spreadsheet</h3><p>A CSV file of every item that opens in Excel, Numbers or Google Sheets.</p></div>
+        <div class="export-card reveal"><span class="tile"><svg class="ic"><use href="#i-archive"/></svg></span><h3>Full backup</h3><p>Everything, photos included, in one file you can keep anywhere and restore on iPhone, iPad or Android.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block legacy" id="legacy">
+    <div class="wrap">
+      <div class="legacy-copy reveal">
+        <p class="eyebrow">Legacy Planning <span class="badge-pro">PRO</span></p>
+        <h2>Decide who receives what.</h2>
+        <p>Some things matter more than their price. Legacy Planning lets you write down who should have them, so your family isn’t left guessing.</p>
+        <ul class="checks">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Add the people in your life, with how they’re related to you.</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Choose a recipient for an item, or set a rule for a whole room or category.</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Export an Estate Distribution PDF listing who receives what, with values, to share with family or your executor.</li>
+        </ul>
+        <p class="fine">Legacy Planning is an organizational record of your wishes. It is not a will or a legal document, and does not replace advice from a lawyer.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="block tinted" id="pricing">
     <div class="wrap">
       <div class="block-head reveal">
         <h2>Free to start. <span class="accent">One purchase, ever.</span></h2>
-        <p>Odune Pro is a one-time purchase, not a subscription. Buy it once and it’s yours, like the things it keeps track of.</p>
+        <p class="slogan">Your belongings aren’t a subscription. Your inventory shouldn’t be either.</p>
+        <p>Free is the whole app for a smaller home, not a trial. When your home outgrows it, Odune Pro is one purchase, and it’s yours.</p>
       </div>
       <div class="plans">
         <div class="plan reveal">
@@ -228,7 +293,7 @@
             <li>Warranty tracking &amp; reminders</li>
             <li>Every export format: PDF, CSV, full backup</li>
           </ul>
-          <p class="note">Everything you need to document an apartment.</p>
+          <p class="note">Enough for an apartment or a smaller home. Use it as long as you like.</p>
         </div>
         <div class="plan pro reveal">
           <h3>Pro <span class="price">$9.99 <small>one-time</small></span></h3>
@@ -238,8 +303,19 @@
             <li>Legacy Planning &amp; Estate Distribution PDF</li>
             <li>Future improvements to current Pro features included</li>
           </ul>
-          <p class="note">Legacy Planning is an organizational record, not a will or legal instrument.</p>
+          <p class="note">For a larger home, several properties, or planning ahead. No subscription.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prepared">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Be prepared</p>
+        <h2>If something happened tomorrow, would you know what you owned?</h2>
+        <p>Odune helps you build a visual record of your belongings, with photos, receipts and values in one place, so the details are ready when you need them: for an insurance claim, a move, or your own peace of mind.</p>
+        <a class="btn primary" href="#launch">Join the launch list <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -278,7 +354,9 @@
   <div class="wrap">
     <span class="foot-brand"><img src="assets/icon-64.png" width="64" height="64" alt="">Odune</span>
     <a href="privacy.html">Privacy Policy</a>
+    <a href="support.html#faq">FAQ</a>
     <a href="support.html">Support</a>
+    <a href="mailto:support@odune.app">Contact</a>
     <span>© 2026 The DVE Group LLC</span>
   </div>
 </footer>
